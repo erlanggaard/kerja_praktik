@@ -1,0 +1,2 @@
+
+<?php echo $__env->make('layout/main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\example-app\resources\views/halaman_admin/admin.blade.php ENDPATH**/ ?>
