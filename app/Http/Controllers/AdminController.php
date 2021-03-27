@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function index()
     {
         $barang = DB::table('barang')->get();
-        return view('halaman_admin/admin');
+        return view('halaman_admin/index');
     }
 
     /**

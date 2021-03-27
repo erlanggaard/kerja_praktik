@@ -17,4 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+Route::get('/', 'App\Http\Controllers\AdminController@index');
