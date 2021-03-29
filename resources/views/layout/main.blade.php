@@ -65,7 +65,7 @@
                     </div>
                     <ul class="sidebar-menu">
                         <li class="menu-header">Dasboard</li>
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown ">
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Produk</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="index-0.html">Lihat Produk</a></li>
@@ -73,25 +73,32 @@
                                 <li><a class="nav-link" href="index-0.html">Stok Produk</a></li>
                             </ul>
                         </li>
-
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown ">
                             <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Supplier</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="index-0.html">Lihat Supplier</a></li>
                                 <li><a class="nav-link" href="index-0.html">Tambah Supplier</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i><span>Admin</span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link" href="index-0.html">Produk Terjual</a></li>
+                                <li><a class="nav-link" href="index-0.html">Produk Tidak Terjual</a></li>
+                                <li><a class="nav-link" href="index-0.html">Best Seller</a></li>
+
 
                             </ul>
                         </li>
-
                     </ul>
-
-
                 </aside>
             </div>
 
             <!-- Main Content -->
             <div class="main-content">
-                @yield('container');
+                <section class="section">
+                    @yield('container');
+                </section>
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
