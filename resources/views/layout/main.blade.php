@@ -33,8 +33,6 @@
                     </ul>
                 </form>
                 <ul class="navbar-nav navbar-right">
-
-
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
                             <div class="d-sm-none d-lg-inline-block">Hi, Ade</div>
@@ -76,8 +74,7 @@
                         <li class="nav-item dropdown ">
                             <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Supplier</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">Lihat Supplier</a></li>
-                                <li><a class="nav-link" href="index-0.html">Tambah Supplier</a></li>
+                                <li><a class="nav-link" href="{{ route('supplier.supplier') }}">Lihat Supplier</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown ">
@@ -86,14 +83,11 @@
                                 <li><a class="nav-link" href="index-0.html">Produk Terjual</a></li>
                                 <li><a class="nav-link" href="index-0.html">Produk Tidak Terjual</a></li>
                                 <li><a class="nav-link" href="index-0.html">Best Seller</a></li>
-
-
                             </ul>
                         </li>
                     </ul>
                 </aside>
             </div>
-
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
