@@ -14,29 +14,32 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-12">
-                                    <div class="form-group">
-                                <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama">
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Alamat</label>
-                                <input type="text" class="form-control" id="alamat">
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Email</label>
-                                <input type="email" class="form-control" id="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="telepon">Telepon</label>
-                                <input type="text" class="form-control" id="telepon">
-                            </div>
-                            <div class="form-group">
-                                <label for="status">Status</label>
-                                <input type="text" class="form-control" id="status">
-                            </div>
-                            <div class="button">
-                                <a href="#" class="btn btn-primary mb-4">Submit</a>
-                            </div>
+                                    <form action="{{ route('supplier.simpan-supplier') }}" method="POST">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="nama">Nama</label>
+                                            <input type="text" class="form-control" id="nama">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="alamat">Alamat</label>
+                                            <textarea name="alamat" class="form-control" id="alamat"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="telepon">Telepon</label>
+                                            <input type="text" class="form-control" id="telepon">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="status">Status</label>
+                                            <input type="text" class="form-control" id="status">
+                                        </div>
+                                        <div class="form-group">
+                                            <button href="" type="submit" class="btn btn-primary mb-4">Submit</button>
+                                        </div>
+                                    </form>                                   
                                 </div>
                             </div>
                         </div>

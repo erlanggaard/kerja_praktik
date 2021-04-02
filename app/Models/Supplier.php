@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Supplier extends Model
 {
-    use HasFactory;
+    protected $table = "kontak";
+    protected $fillable = [
+        'nama', 'alamat', 'email', 'telepon', 'status'
+    ];
 }

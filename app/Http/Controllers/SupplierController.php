@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Supplier;
 
 class SupplierController extends Controller
 {
@@ -13,7 +14,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        return view('supplier.supplier');
+        $dataSupplier = Supplier::paginate(25);
+        return view('supplier.supplier', compact('dataSupplier'));
     }
 
     /**
@@ -34,7 +36,16 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        Supplier::create([
+            'nama' => $request -> nama,
+            'alamat' => $request -> alamat,
+            'email' => $request -> email,
+            'telepon' => $request -> telepon,
+            'status' => $request -> status,
+        ]);
+
+        return redirect('supplier.supplier');
     }
 
     /**
