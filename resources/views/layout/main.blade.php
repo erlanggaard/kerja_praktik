@@ -72,9 +72,10 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown ">
-                            <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>Supplier</span></a>
+                            <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i><span>User</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="{{ route('supplier.supplier') }}">Lihat Supplier</a></li>
+                                <li><a class="nav-link" href="{{ route('pelanggan.pelanggan') }}">Lihat Pelanggan</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown ">

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pelanggan;
 use App\Models\Supplier;
 
-class SupplierController extends Controller
+class PelangganController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $dataSupplier = Supplier::paginate(25);
-        return view('supplier.supplier', compact('dataSupplier'));
+        $dataPelanggan = Pelanggan::paginate(25);
+        return view('pelanggan.pelanggan', compact('dataPelanggan'));
     }
 
     /**
@@ -25,7 +26,7 @@ class SupplierController extends Controller
      */
     public function create()
     {
-        return view('supplier.create-supplier');
+        return view('pelanggan.create-pelanggan');
     }
 
     /**
@@ -36,8 +37,7 @@ class SupplierController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        Supplier::create([
+        Pelanggan::create([
             'nama' => $request -> nama,
             'alamat' => $request -> alamat,
             'email' => $request -> email,
@@ -45,7 +45,7 @@ class SupplierController extends Controller
             'status' => $request -> status,
         ]);
 
-        return redirect('supplier');
+        return redirect('pelanggan');
     }
 
     /**

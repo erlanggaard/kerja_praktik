@@ -4,11 +4,11 @@
     <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Daftar Supplier</h4>
+                    <h4>Daftar Pelanggan</h4>
                 </div>
                 <div class="col-12">
                     <div class="button">
-                        <a href="{{ route('supplier.create-supplier') }}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah Data</a>
+                        <a href="{{ route('pelanggan.create-pelanggan') }}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Tambah Data</a>
                     </div>
                 </div>
                 <div class="card-body">
@@ -22,7 +22,7 @@
                                 <th>Status</th>
                                 <th>Action</th>
                             </tr>
-                            @foreach ($dataSupplier as $item)
+                            @foreach ($dataPelanggan as $item)
                             <tr>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->alamat }}</td>
@@ -32,7 +32,7 @@
                             </tr>
                             @endforeach
                         </table>
-                            {{ $dataSupplier->links() }}                                                                      
+                            {{ $dataPelanggan->links() }}                                                                      
                     </div>
                     <canvas id="myChart" height="158"></canvas>
                 </div>
