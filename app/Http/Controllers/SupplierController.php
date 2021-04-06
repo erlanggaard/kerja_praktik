@@ -14,7 +14,8 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $dataSupplier = Supplier::paginate(25);
+        $dataSupplier = Supplier::where('status', '!=', 'pelanggan')->paginate(25);
+        // $dataSupplier = Supplier::paginate(25);
         return view('supplier.supplier', compact('dataSupplier'));
     }
 
