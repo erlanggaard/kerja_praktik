@@ -87,7 +87,9 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    <h4>Daftar Pelanggan</h4>
+                    <a href="{{ route('pelanggan.create-pelanggan') }}">
+                        <h4>Daftar Pelanggan</h4>
+                    </a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
