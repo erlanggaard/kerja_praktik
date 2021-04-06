@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class AdminController extends Controller
+class produkTerjualController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //$barang = DB::table('barang')->get();
-        return view('halaman_admin/index');
+        return view('halaman_admin/produk_terjual');
     }
 
     /**
@@ -25,6 +23,7 @@ class AdminController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**

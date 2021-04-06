@@ -5,8 +5,12 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PelangganController;
 
 //Route Admin
-Route::get('/', 'App\Http\Controllers\AdminController@index');
+Route::get('home', 'App\Http\Controllers\AdminController@index');
+Route::get('produk-terjual', 'App\Http\Controllers\produkTerjualController@index');
 
+Route::get('/', function () {
+    return view('login');
+});
 //end Route Admin
 
 

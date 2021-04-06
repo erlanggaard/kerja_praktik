@@ -56,7 +56,7 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="/">ahlibisnis.id</a>
+                        <a href="home">Ahlibisnis.id</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html"></a>
