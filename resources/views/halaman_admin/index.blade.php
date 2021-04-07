@@ -79,7 +79,7 @@
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{ route('pelanggan.create-pelanggan') }}">
+                    <a href="{{ route('pelanggan.pelanggan') }}">
                         <h4>Daftar Pelanggan</h4>
                     </a>
                 </div>
