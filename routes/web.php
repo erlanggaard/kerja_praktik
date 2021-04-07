@@ -13,6 +13,12 @@ Route::get('/', function () {
 });
 //end Route Admin
 
+//Route Produk
+
+Route::get('produk', 'App\Http\Controllers\produkController@index');
+
+// end Route Produk
+
 
 //Route Supplier
 Route::get('supplier', [SupplierController::class, 'index'])->name('supplier.supplier');
