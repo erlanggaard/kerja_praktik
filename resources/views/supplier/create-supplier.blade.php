@@ -18,7 +18,7 @@
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
-                                            <input type="text" class="form-control" id="nama">
+                                            <input name="nama" type="text" class="form-control" id="nama">
                                         </div>
                                         <div class="form-group">
                                             <label for="alamat">Alamat</label>
@@ -26,15 +26,15 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" id="email">
+                                            <input name="email" type="email" class="form-control" id="email">
                                         </div>
                                         <div class="form-group">
                                             <label for="telepon">Telepon</label>
-                                            <input type="text" class="form-control" id="telepon">
+                                            <input name="telepon" type="text" class="form-control" id="telepon">
                                         </div>
                                         <div class="form-group">
                                             <label for="status">Status</label>
-                                            <input type="text" class="form-control" id="status">
+                                            <input name="status" type="text" class="form-control" id="status">
                                         </div>
                                         <div class="form-group">
                                             <button href="{{ route('supplier.simpan-supplier') }}" type="submit" class="btn btn-primary mb-4">Submit</button>
