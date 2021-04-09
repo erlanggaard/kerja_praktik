@@ -2,43 +2,119 @@
 
 @section('container')
 
-<section class="section">
-
-    <div class="card mt-5">
-        <div class="card-header">
-            <h4>Popular Browser</h4>
-        </div>
-        <div class="card-body">
-            <div class="row">
-                <div class="col mb-4 mb-lg-0 text-center">
-                    <div class="browser browser-chrome"></div>
-                    <div class="mt-2 font-weight-bold">Chrome</div>
-                    <div class="text-small text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>
-                        48%</div>
-                </div>
-                <div class="col mb-4 mb-lg-0 text-center">
-                    <div class="browser browser-firefox"></div>
-                    <div class="mt-2 font-weight-bold">Firefox</div>
-                    <div class="text-small text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>
-                        26%</div>
-                </div>
-                <div class="col mb-4 mb-lg-0 text-center">
-                    <div class="browser browser-safari"></div>
-                    <div class="mt-2 font-weight-bold">Safari</div>
-                    <div class="text-small text-muted"><span class="text-danger"><i
-                                class="fas fa-caret-down"></i></span> 14%</div>
-                </div>
-                <div class="col mb-4 mb-lg-0 text-center">
-                    <div class="browser browser-opera"></div>
-                    <div class="mt-2 font-weight-bold">Opera</div>
-                    <div class="text-small text-muted">7%</div>
-                </div>
-                <div class="col mb-4 mb-lg-0 text-center">
-                    <div class="browser browser-internet-explorer"></div>
-                    <div class="mt-2 font-weight-bold">IE</div>
-                    <div class="text-small text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>
-                        5%</div>
-                </div>
+<div class="card mt-2">
+    <div class="card-header">
+        <h3> Produk </h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img08.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img08.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img08.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img04.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img09.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-lg-2">
+                <article class="article">
+                    <div class="article-header">
+                        <div class="article-image" data-background="assets/img/news/img12.jpg">
+                        </div>
+                        <div class="article-title">
+                            <h2><a href="#">Excepteur sint occaecat cupidatat non proident</a></h2>
+                        </div>
+                    </div>
+                    <div class="article-details">
+                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. </p>
+                        <div class="article-cta">
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </div>
