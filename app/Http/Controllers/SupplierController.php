@@ -15,7 +15,6 @@ class SupplierController extends Controller
     public function index()
     {
         $dataSupplier = Supplier::where('status', '!=', 'pelanggan')->paginate(25);
-        // $dataSupplier = Supplier::paginate(25);
         return view('supplier.supplier', compact('dataSupplier'));
     }
 
@@ -46,7 +45,7 @@ class SupplierController extends Controller
             'status' => $request -> status,
         ]);
 
-        return redirect('supplier');
+        return redirect('supplier')->with('success', 'Task Created Successfully!');;
     }
 
     /**

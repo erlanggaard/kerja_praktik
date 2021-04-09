@@ -45,7 +45,7 @@ class PelangganController extends Controller
             'status' => $request -> status,
         ]);
 
-        return redirect('pelanggan');
+        return redirect('pelanggan')->with('success', 'Task Created Successfully!');;
     }
 
     /**

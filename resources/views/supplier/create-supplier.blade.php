@@ -34,7 +34,11 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="status">Status</label>
-                                            <input name="status" type="text" class="form-control" id="status">
+                                            {{-- <input name="status" type="text" class="form-control" id="status"> --}}
+                                            <select class="form-control" id="status" class="form-control" name="status">
+                                                <option>suplier</option>
+                                                <option>pelanggan</option>
+                                            </select>
                                         </div>
                                         <div class="form-group">
                                             <button href="{{ route('supplier.simpan-supplier') }}" type="submit" class="btn btn-primary mb-4">Submit</button>
@@ -44,9 +48,6 @@
                             </div>
                         </div>
                     </div>                        
-                    <div class="card-footer bg-whitesmoke">
-                        This is card footer
-                    </div>
                 </div>       
         </div>
     </div>
