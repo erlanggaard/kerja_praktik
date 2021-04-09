@@ -5,7 +5,7 @@
     <div class="col-lg-8 col-md-12 col-12 col-sm-12">
         <div class="card">
             <div class="card-header">
-                <h4>Produk Terjual</h4>
+                <h4>PRODUK TERJUAL</h4>
                 <div class="card-header-action">
                     <div class="btn-group">
                         <a href="#" class="btn btn-primary">Week</a>
@@ -14,29 +14,59 @@
                 </div>
             </div>
             <div class="card-body">
-                <canvas id="myChart" height="182"></canvas>
-                <div class="statistic-details mt-sm-4">
-                    <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 7%</span>
-                        <div class="detail-value">$243</div>
-                        <div class="detail-name">Today's Sales</div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-md">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama Barang</th>
+                                        <th>Bayar</th>
+                                        <th>Pendapatan</th>
+                                        <th>Waktu Transaksi</th>
+                                        <th>Tipe</th>
+                                        <th>Status</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>er</td>
+                                        <td>er</td>
+                                        <td>er</td>
+                                        <td>er</td>
+                                        <td>er</td>
+                                        <td>er</td>
+                                        <td>
+                                            <a href="" class="badge badge-success">Detail</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
                     </div>
-                    <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-danger"><i class="fas fa-caret-down"></i></span> 23%</span>
-                        <div class="detail-value">$2,902</div>
-                        <div class="detail-name">This Week's Sales</div>
-                    </div>
-                    <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span>9%</span>
-                        <div class="detail-value">$12,821</div>
-                        <div class="detail-name">This Month's Sales</div>
-                    </div>
-                    <div class="statistic-details-item">
-                        <span class="text-muted"><span class="text-primary"><i class="fas fa-caret-up"></i></span> 19%</span>
-                        <div class="detail-value">$92,142</div>
-                        <div class="detail-name">This Year's Sales</div>
+                    <div class="card-footer text-right">
+                        <nav class="d-inline-block">
+                            <ul class="pagination mb-0">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1 <span class="sr-only">(current)</span></a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

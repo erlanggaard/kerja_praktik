@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class produkTerjualController extends Controller
 {
@@ -13,6 +14,7 @@ class produkTerjualController extends Controller
      */
     public function index()
     {
+        $t_barang = DB::table('penjualan')->get();
         return view('halaman_admin/produk_terjual');
     }
 
