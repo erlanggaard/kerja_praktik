@@ -8,6 +8,9 @@ use App\Http\Controllers\produkController;
 //Route Admin
 Route::get('home', 'App\Http\Controllers\AdminController@index');
 Route::get('produk-terjual', 'App\Http\Controllers\produkTerjualController@index');
+Route::get('detail-produk-terjual', function () {
+    return view('halaman_admin/detail_produk_terjual');
+});
 
 Route::get('/', function () {
     return view('login');

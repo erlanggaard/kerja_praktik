@@ -150,14 +150,7 @@
                 <div class="card-header">
                     <h4>Best Seller</h4>
                     <div class="card-header-action dropdown">
-                        <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
-                        <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                            <li class="dropdown-title">Select Period</li>
-                            <li><a href="#" class="dropdown-item">Today</a></li>
-                            <li><a href="#" class="dropdown-item">Week</a></li>
-                            <li><a href="#" class="dropdown-item active">Month</a></li>
-                            <li><a href="#" class="dropdown-item">This Year</a></li>
-                        </ul>
+                        <a href="#" class="btn btn-primary">View All</a>
                     </div>
                 </div>
                 <div class="card-body" id="top-5-scroll">

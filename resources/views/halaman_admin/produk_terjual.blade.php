@@ -35,18 +35,15 @@
                                         <td>{{$brg_terjual->tipe}}</td>
                                         <td>{{$brg_terjual->status}}</td>
                                         <td>
-                                            <a href="" class="badge badge-success">Detail</a>
+                                            <a href="detail-produk-terjual" class="badge badge-success">Detail</a>
                                         </td>
                                     </tr>
                                     @endforeach
                                 </tbody>
-
                             </table>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
