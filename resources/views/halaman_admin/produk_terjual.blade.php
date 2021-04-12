@@ -6,7 +6,6 @@
         <div class="card">
             <div class="card-header">
                 <h4>PRODUK TERJUAL</h4>
-
             </div>
             <div class="card-body">
                 <div class="card">
@@ -52,7 +51,7 @@
         </div>
     </div>
 
-</div>
 
 
-@endsection
+
+    @endsection

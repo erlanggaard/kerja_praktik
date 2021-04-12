@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
     <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -84,7 +84,7 @@
                         <li class="nav-item dropdown ">
                             <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i><span>Admin</span></a>
                             <ul class="dropdown-menu">
-                                <li><a class="nav-link" href="index-0.html">Produk Terjual</a></li>
+                                <li><a class="nav-link" href="produk-terjual">Produk Terjual</a></li>
                                 <li><a class="nav-link" href="index-0.html">Produk Tidak Terjual</a></li>
                                 <li><a class="nav-link" href="index-0.html">Best Seller</a></li>
                             </ul>
@@ -136,7 +136,7 @@
     <!-- Page Specific JS File -->
     <script src="../assets/js/page/index.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#example').DataTable();
