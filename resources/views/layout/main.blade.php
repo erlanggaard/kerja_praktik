@@ -100,8 +100,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad
-                        Nauval Azhar</a>
+                    Copyright &copy; 2021 <div class="bullet"></div> Design By <a href=""></a>
                 </div>
                 <div class="footer-right">
                     2.3.0
@@ -120,6 +119,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="../assets/js/stisla.js"></script>
 
+
     <!-- JS Libraies -->
     <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
@@ -127,14 +127,14 @@
     <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
     <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
+
     <!-- Template JS File -->
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/custom.js"></script>
 
+
     <!-- Page Specific JS File -->
     <script src="../assets/js/page/index.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap5.min.js"></script>
     <script type="text/javascript">
@@ -142,6 +142,8 @@
             $('#example').DataTable();
         });
     </script>
+
+
 
 </body>
 
