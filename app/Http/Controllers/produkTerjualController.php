@@ -14,8 +14,8 @@ class produkTerjualController extends Controller
      */
     public function index()
     {
-        $t_barang = DB::table('penjualan')->get();
-        return view('halaman_admin/produk_terjual');
+        $barang_terjual = DB::table('penjualan')->get();
+        return view('halaman_admin/produk_terjual', ['penjualan' => $barang_terjual]);
     }
 
     /**
