@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\produkController;
 
 //Route Admin
 Route::get('home', 'App\Http\Controllers\AdminController@index');
@@ -15,7 +16,10 @@ Route::get('/', function () {
 
 //Route Produk
 
-Route::get('produk', 'App\Http\Controllers\produkController@index');
+Route::get('produk', [produkController::class, 'index'])->name('produk.produk');
+Route::get('stokproduk', function () {
+    return view('produk.stock-produk');
+});
 
 // end Route Produk
 
