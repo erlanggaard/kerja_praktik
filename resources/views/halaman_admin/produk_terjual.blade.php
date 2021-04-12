@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="example" class="table table-striped" style="width:100%">
+                            <table id="tabel_produk_terjual" class="table table-striped" style="width:100%">
                                 <thead>
                                     <tr>
                                         <th>No</th>
