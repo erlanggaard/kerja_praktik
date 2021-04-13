@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class produkController extends Controller
+use App\Models\Produk;
+
+class stokprodukController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +16,8 @@ class produkController extends Controller
      */
     public function index()
     {
-
-        return view('produk/produk');
+        $dataProduk = Produk::paginate(25);
+        return view('produk.stock-produk', compact('dataProduk'));
     }
 
     /**
