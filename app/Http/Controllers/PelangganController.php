@@ -38,11 +38,11 @@ class PelangganController extends Controller
     public function store(Request $request)
     {
         Pelanggan::create([
-            'nama' => $request -> nama,
-            'alamat' => $request -> alamat,
-            'email' => $request -> email,
-            'telepon' => $request -> telepon,
-            'status' => $request -> status,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'status' => $request->status,
         ]);
 
         return redirect('pelanggan')->with('success', 'Task Created Successfully!');;
