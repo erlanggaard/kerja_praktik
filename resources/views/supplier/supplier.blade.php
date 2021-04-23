@@ -29,6 +29,9 @@
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->status }}</td>
+                                <td>
+                                    <a href="{{ url('edit-supplier') }}"> Edit </a> | <a href="" style="color: red"> Delete </a>
+                                </td>
                             </tr>
                             @endforeach
                         </table>
