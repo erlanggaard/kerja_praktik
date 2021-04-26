@@ -24,6 +24,17 @@ Route::middleware(['auth'])->group(function () {
     });
     //end Route Admin
 
+    //Route chat whatsapp
+    Route::get('formchat', function () {
+        return view('whatsapp/formSending');
+    });
+
+    Route::get('send', function () {
+        return view('whatsapp/send');
+    });
+
+    //end route chat whatsapp
+
     // Route Logout
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     // end Route Logout

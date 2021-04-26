@@ -100,6 +100,32 @@
 
                     <canvas id="myChart" height="158"></canvas>
                 </div>
+
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <a href="{{ route('supplier.supplier') }}">
+                        <h4>Daftar Supplier</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-md">
+                            <tr>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Email</th>
+                                <th>Telepon</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <canvas id="myChart" height="158"></canvas>
+                </div>
+
             </div>
         </div>
         <div class="col-lg-4">
