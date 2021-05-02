@@ -15,6 +15,7 @@
                     <div class="table-responsive">
                         <table class="table table-striped table-md">
                             <tr>
+                                <th>id</th>
                                 <th>Nama</th>
                                 <th>Alamat</th>
                                 <th>Email</th>
@@ -24,13 +25,14 @@
                             </tr>
                             @foreach ($dataSupplier as $item)
                             <tr>
+                                <td>{{ $item->id }}</td>
                                 <td>{{ $item->nama }}</td>
                                 <td>{{ $item->alamat }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->status }}</td>
                                 <td>
-                                    <a href="{{ url('edit-supplier') }}"> Edit </a> | <a href="" style="color: red"> Delete </a>
+                                    <a href="{{ url('edit-supplier',[$item]) }}"> Edit </a> | <a href="" style="color: red"> Delete </a>
                                 </td>
                             </tr>
                             @endforeach

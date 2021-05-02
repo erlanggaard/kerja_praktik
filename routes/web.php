@@ -49,7 +49,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('supplier', [SupplierController::class, 'index'])->name('supplier.supplier');
     Route::get('create-supplier', [SupplierController::class, 'create'])->name('supplier.create-supplier');
     Route::post('save-supplier', [SupplierController::class, 'store'])->name('supplier.simpan-supplier');
-    Route::get('edit-supplier', [SupplierController::class, 'edit'])->name('supplier.edit-supplier');
+    Route::get('edit-supplier/{$id}', [SupplierController::class, 'edit'])->name('supplier.edit-supplier');
     //end Route Supplier
 
     //Route Pelanggan

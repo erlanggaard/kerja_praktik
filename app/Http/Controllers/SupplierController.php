@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Supplier;
+use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
@@ -14,7 +15,7 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $dataSupplier = Supplier::where('status', '!=', 'pelanggan')->paginate(25);
+        $dataSupplier = Supplier::paginate(25);
         return view('supplier.supplier', compact('dataSupplier'));
     }
 
