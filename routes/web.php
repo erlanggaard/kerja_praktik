@@ -41,9 +41,12 @@ Route::middleware(['auth'])->group(function () {
 
     //Route Produk
     Route::get('produk', [produkController::class, 'index'])->name('produk.produk');
-    Route::get('stokproduk', [stokprodukController::class, 'index'])->name('produk.stock-produk');
+    Route::get('produk/{id}', [produkController::class, 'show'])->name('produk.produkdetail');
     // end Route Produk
 
+    // Route Stock Produk
+    Route::get('stokproduk', [stokprodukController::class, 'index'])->name('produk.stock-produk');
+    // end Route Stock Produk
 
     //Route Supplier
     Route::get('supplier', [SupplierController::class, 'index'])->name('supplier.supplier');
