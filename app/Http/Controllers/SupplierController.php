@@ -46,7 +46,7 @@ class SupplierController extends Controller
             'status' => $request -> status,
         ]);
 
-        return redirect('supplier')->with('success', 'Task Created Successfully!');;
+        return redirect('supplier')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -68,8 +68,8 @@ class SupplierController extends Controller
      */
     public function edit($id)
     {
-        $sup = Supplier::findorfail($id);
-        return view('supplier.edit-supplier');
+        $sup = Supplier::where($id);
+        return view('supplier.edit-supplier', compact('sup'));
     }
 
     /**
@@ -81,7 +81,9 @@ class SupplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $sup = Supplier::where('id', $id);
+        $sup->update($request->all());
+        return redirect('supplier')->with('success', 'Task Created Successfully!');
     }
 
     /**

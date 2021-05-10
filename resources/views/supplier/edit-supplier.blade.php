@@ -14,7 +14,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-12">
-                                    <form action="#" method="POST">
+                                    <form action="{{ route('update-supplier') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
