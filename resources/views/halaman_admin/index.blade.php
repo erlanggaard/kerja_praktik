@@ -63,7 +63,7 @@
                     </div>
                     <div class="card-body">
                         4,732
-                        <a href="#" class="btn btn-primary" style="float:right;">
+                        <a href="produk-tidakterjual" class="btn btn-primary" style="float:right;">
                             View All
                         </a>
                     </div>
@@ -84,27 +84,18 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-md">
-                            <thead>
-                                <tr>
-                                    <th>Nama</th>
-                                    <th>Alamat</th>
-                                    <th>Email</th>
-                                    <th>Telepon</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($kontakAll as $kontak)
-                                <tr>
-                                    <th>{{$kontak['nama']}}</th>
-                                </tr>
-                                @endforeach
-                            </tbody>
-
+                        <table id="tabel_produk_terjual" class="table table-striped table-md">
+                            <tr>
+                                <th>Nama</th>
+                                <th>Alamat</th>
+                                <th>Email</th>
+                                <th>Telepon</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
 
                         </table>
+
                     </div>
 
                     <canvas id="myChart" height="158"></canvas>
@@ -213,12 +204,8 @@
                 </div>
                 <div class="card-footer pt-3 d-flex justify-content-center">
                     <div class="budget-price justify-content-center">
-
-
                     </div>
                     <div class="budget-price justify-content-center">
-
-
                     </div>
                 </div>
             </div>

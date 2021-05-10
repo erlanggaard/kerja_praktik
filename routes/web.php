@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('detail-produk-terjual', function () {
         return view('halaman_admin/detail_produk_terjual');
     });
+    Route::get('produk-tidakterjual', 'App\Http\Controllers\produkTidakterjualController@index');
     //end Route Admin
 
     //Route chat whatsapp

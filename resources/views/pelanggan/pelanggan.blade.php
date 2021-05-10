@@ -22,13 +22,13 @@
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
-                    @foreach ($dataPelanggan as $item)
+                    @foreach ($dataPelanggan)
                     <tr>
-                        <td>{{ $item->nama }}</td>
-                        <td>{{ $item->alamat }}</td>
-                        <td>{{ $item->email }}</td>
-                        <td>{{ $item->telepon }}</td>
-                        <td>{{ $item->status }}</td>
+                        <td>{{ $dataPelanggan->nama }}</td>
+                        <td>{{ $dataPelanggan->alamat }}</td>
+                        <td>{{ $dataPelanggan->email }}</td>
+                        <td>{{ $dataPelanggan->telepon }}</td>
+                        <td>{{ $dataPelanggan->status }}</td>
                     </tr>
                     @endforeach
                 </table>

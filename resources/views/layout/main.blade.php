@@ -107,15 +107,14 @@
                     </ul>
                 </aside>
             </div>
+
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
                     @yield('container');
                 </section>
             </div>
-            <a href="formchat" class="btn btn-primary" style="float:right;">
-                Chat Whatsapp
-            </a>
+
             <footer class="main-footer">
 
                 <div class="footer-left">
