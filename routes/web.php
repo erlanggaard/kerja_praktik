@@ -25,9 +25,8 @@ Route::middleware(['auth'])->group(function () {
     //end Route Admin
 
     //Route chat whatsapp
-    Route::get('formchat', function () {
-        return view('whatsapp/formSending');
-    });
+    Route::get('formchat', 'App\Http\Controllers\controllerWhatsapp@index');
+    //  Route::get('search/{kode_user}', 'App\Http\Controllers\controllerWhatsapp@seacrhPelanggan');
 
     Route::get('send', function () {
         return view('whatsapp/send');

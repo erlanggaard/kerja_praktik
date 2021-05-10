@@ -13,7 +13,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table id="tabel_pelanggan" class="table table-striped table-md">
+                <table id="tabel_produk_terjual" class="table table-striped table-md">
                     <tr>
                         <th>Nama</th>
                         <th>Alamat</th>

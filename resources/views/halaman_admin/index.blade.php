@@ -4,7 +4,6 @@
 
 
 @section('container')
-
 <section class="section">
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-12">
@@ -86,14 +85,24 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-md">
-                            <tr>
-                                <th>Nama</th>
-                                <th>Alamat</th>
-                                <th>Email</th>
-                                <th>Telepon</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Alamat</th>
+                                    <th>Email</th>
+                                    <th>Telepon</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($kontakAll as $kontak)
+                                <tr>
+                                    <th>{{$kontak['nama']}}</th>
+                                </tr>
+                                @endforeach
+                            </tbody>
+
 
                         </table>
                     </div>

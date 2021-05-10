@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pelanggan;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Models\Supplier;
 
-class AdminController extends Controller
+class controllerWhatsapp extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +14,21 @@ class AdminController extends Controller
      */
     public function index()
     {
-        //$barang = DB::table('barang')->get();
-        $kontak = Supplier::all();
+        $kontak = Pelanggan::all();
         $data = [
             'kontakAll' => $kontak,
         ];
-        return view('halaman_admin.index', $data);
+        return view('whatsapp.formsending', $data);
+    }
+    public function seacrhPelanggan($kode_user)
+    {
+        $kontak = Pelanggan::where('kode_user', $kode_user)->first();
+        return $kontak->toArray();
+        // dd($kontak);
+        // $data = [
+        //     'kontakAll' => $kontak,
+        // ];
+        // return view('whatsapp.formsending', $data);
     }
 
     /**
@@ -30,6 +38,7 @@ class AdminController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
