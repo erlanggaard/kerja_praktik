@@ -9,10 +9,10 @@
                 <h4>Detail Transaksi</h4>
             </div>
             <div class="card-body">
-
+                Nama Produk :
             </div>
             <div class="card-footer">
-                Card Footer
+                
             </div>
 
         </div>

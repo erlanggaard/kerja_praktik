@@ -1,8 +1,5 @@
 @extends('layout/main')
 
-
-
-
 @section('container')
 <section class="section">
     <div class="row">

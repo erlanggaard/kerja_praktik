@@ -20,8 +20,7 @@
                                         <th>Pendapatan</th>
                                         <th>Waktu Transaksi</th>
                                         <th>Tipe</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
+                                        <th>Status</th> 
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -34,9 +33,6 @@
                                         <td>{{$brg_terjual->waktutransaksi}}</td>
                                         <td>{{$brg_terjual->tipe}}</td>
                                         <td>{{$brg_terjual->status}}</td>
-                                        <td>
-                                            <a href="detail-produk-terjual" class="badge badge-success">Detail</a>
-                                        </td>
                                     </tr>
                                     @endforeach
                                 </tbody>

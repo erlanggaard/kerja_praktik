@@ -9,7 +9,7 @@
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
-                <table class="table table-striped table-md">
+                <table id="tabel_produk_terjual" class="table table-striped table-md">
                     <tr>
                         <th>Nama Barang</th>
                         <th>Status</th>
