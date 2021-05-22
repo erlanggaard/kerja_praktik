@@ -23,11 +23,13 @@ Route::middleware(['auth'])->group(function () {
         return view('halaman_admin/detail_produk_terjual');
     });
     Route::get('produk-tidakterjual', 'App\Http\Controllers\produkTidakterjualController@index');
+
+    Route::get('best_seller', 'App\Http\Controllers\bestSellerController@index');
     //end Route Admin
 
     //Route chat whatsapp
     Route::get('formchat', 'App\Http\Controllers\controllerWhatsapp@index');
-    //  Route::get('search/{kode_user}', 'App\Http\Controllers\controllerWhatsapp@seacrhPelanggan');
+
 
     Route::get('send', function () {
         return view('whatsapp/send');

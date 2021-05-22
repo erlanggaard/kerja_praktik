@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pelanggan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class controllerWhatsapp extends Controller
+class bestSellerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,16 +14,9 @@ class controllerWhatsapp extends Controller
      */
     public function index()
     {
-        $kontak = Pelanggan::all();
-        $data = [
-            'kontakAll' => $kontak,
-        ];
-        return view('whatsapp.formsending', $data);
-    }
-    public function seacrhPelanggan($kode_user)
-    {
-        $kontak = Pelanggan::where('kode_user', $kode_user)->first();
-        return $kontak->toArray();
+
+
+        return view('halaman_admin.best_seller');
     }
 
     /**

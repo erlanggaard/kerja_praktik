@@ -5,7 +5,7 @@
     <div class="col-md-12 col-md-12 col-12 col-sm-12">
         <div class="card">
             <div class="card-header">
-                <h4>PRODUK TIDAK TERJUAL</h4>
+                <h4>BEST SELLER</h4>
             </div>
             <div class="card-body">
                 <div class="card">
@@ -15,14 +15,21 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>ID Barang</th>
-                                        <th>Nama Barang</th>
-                                        <th>Harga</th>
-                                        <th>Penjualan</th>
-                                        <th>Action</th>
+                                        <th>Kode Produk</th>
+                                        <th>Nama Produk</th>
+                                        <th>Total Terjual</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
                                     </tr>
                                 </thead>
+                                <tbody>
 
+                                    <tr>
+
+                                    </tr>
+
+                                </tbody>
                             </table>
                         </div>
                     </div>

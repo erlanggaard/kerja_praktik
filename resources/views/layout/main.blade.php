@@ -101,7 +101,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="produk-terjual">Produk Terjual</a></li>
                                 <li><a class="nav-link" href="index-0.html">Produk Tidak Terjual</a></li>
-                                <li><a class="nav-link" href="index-0.html">Best Seller</a></li>
+                                <li><a class="nav-link" href="best_seller">Best Seller</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -118,10 +118,12 @@
             <footer class="main-footer">
 
                 <div class="footer-left">
-                    Copyright &copy; 2021 <div class="bullet"></div> Design By <a href=""></a>
+                    Copyright &copy; 2021 <div class="bullet"></div> <a href=""></a>
                 </div>
                 <div class="footer-right">
-                    2.3.0
+                    <a href="formchat" class="btn btn-primary" style="float:right;">
+                        Chat Pelanggan
+                    </a>
                 </div>
             </footer>
         </div>
@@ -147,7 +149,7 @@
 
     <!-- Template JS File -->
     <script src="{{asset('assets/js/scripts.js')}}"></script>
-    <script src="{{asset("assets/js/custom.js")}}"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
 
 
     <!-- Page Specific JS File -->
