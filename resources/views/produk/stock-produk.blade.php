@@ -5,7 +5,7 @@
 <section class="section">
     <div class="card">
         <div class="card-header">
-            <h4>Stock Produk</h4>
+            <h3>Stock Produk</h3>
         </div>
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -41,6 +41,7 @@
                 </ul>
             </nav>
         </div>
+    </div>
 </section>
 
 
