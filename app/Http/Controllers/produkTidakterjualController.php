@@ -14,8 +14,15 @@ class produkTidakterjualController extends Controller
      */
     public function index()
     {
-        $barang_tidakterjual = DB::table('penjualan')->get();
-        return view('halaman_admin/produk_tidakterjual', ['penjualan' => $barang_tidakterjual]);
+
+        $tidak_terjual = DB::table('detail_penjualan')
+            ->select(DB::raw('COUNT(detail_penjualan.qty) AS total_penjualan, detail_penjualan.kode_barang'), 'nama_barang')
+            ->join('barang', 'barang.kode_barang', '=', 'detail_penjualan.kode_barang')
+            ->groupBy('detail_penjualan.kode_barang')
+            ->groupBy('barang.nama_barang')
+            ->orderBy('total_penjualan', 'asc')
+            ->paginate(25);
+        return view('halaman_admin.produk_tidakterjual', compact('tidak_terjual'));
     }
 
     /**

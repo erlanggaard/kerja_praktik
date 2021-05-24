@@ -17,12 +17,19 @@
                                         <th>No</th>
                                         <th>ID Barang</th>
                                         <th>Nama Barang</th>
-                                        <th>Harga</th>
                                         <th>Penjualan</th>
-                                        <th>Action</th>
                                     </tr>
                                 </thead>
-
+                                <tbody>
+                                    @foreach($tidak_terjual as $tt )
+                                    <tr>
+                                        <th scope="row">{{$loop->iteration}}</th>
+                                        <td>{{$tt->kode_barang}}</td>
+                                        <td>{{$tt->nama_barang}}</td>
+                                        <td>{{$tt->total_penjualan}}</td>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
                             </table>
                         </div>
                     </div>
