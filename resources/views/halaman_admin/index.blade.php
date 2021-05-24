@@ -104,8 +104,8 @@
                         </table>
                         {{ $best_seller->links() }}
                     </div>
-                    <!-- <canvas id="myChart" height="140"></canvas> -->
-                    
+
+
                 </div>
 
             </div>
