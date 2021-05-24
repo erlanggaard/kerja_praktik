@@ -16,7 +16,7 @@ class PelangganController extends Controller
     public function index()
     {
         $dataPelanggan = Supplier::where('status', '!=', 'suplier')->paginate(25);
-        dd($dataPelanggan);
+
         return view('pelanggan.pelanggan', compact('dataPelanggan'));
     }
 
