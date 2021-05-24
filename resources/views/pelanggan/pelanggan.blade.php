@@ -22,13 +22,19 @@
                         <th>Status</th>
                         <th>Action</th>
                     </tr>
-                    @foreach ($dataPelanggan)
+                    @foreach ($dataPelanggan as $item)
                     <tr>
-                        <td>{{ $dataPelanggan->nama }}</td>
-                        <td>{{ $dataPelanggan->alamat }}</td>
-                        <td>{{ $dataPelanggan->email }}</td>
-                        <td>{{ $dataPelanggan->telepon }}</td>
-                        <td>{{ $dataPelanggan->status }}</td>
+                        <td>{{ $item->id }}</td>
+                        <td>{{ $item->nama }}</td>
+                        <td>{{ $item->alamat }}</td>
+                        <td>{{ $item->email }}</td>
+                        <td>{{ $item->telepon }}</td>
+                        <td>{{ $item->status }}</td>
+                        <td>
+                            <a href="{{ url("edit-pelanggan",$item->id) }}"> Edit </a> 
+                            |
+                            <a href="{{ url("delete-pelanggan",$item->id) }}" style="color: red"> Delete </a>
+                        </td>
                     </tr>
                     @endforeach
                 </table>

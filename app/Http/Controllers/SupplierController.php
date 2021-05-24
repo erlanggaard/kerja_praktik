@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Supplier;
-use Illuminate\Support\Facades\DB;
 
 class SupplierController extends Controller
 {
@@ -15,7 +14,7 @@ class SupplierController extends Controller
      */
     public function index()
     {
-        $dataSupplier = Supplier::paginate(25);
+        $dataSupplier = Supplier::where('status', '!=', 'pelanggan')->paginate(25);
         return view('supplier.supplier', compact('dataSupplier'));
     }
 
@@ -55,9 +54,9 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Supplier $supplier)
     {
-        //
+        return view('supplier.supplier', compact('dataSupplier'));
     }
 
     /**
@@ -79,10 +78,16 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Supplier $supplier)
     {
-        $sup = Supplier::where('id', $id);
-        $sup->update($request->all());
+        $supplier->update([
+            'nama' => $request -> nama,
+            'alamat' => $request -> alamat,
+            'email' => $request -> email,
+            'telepon' => $request -> telepon,
+            'status' => $request -> status,
+        ]);
+
         return redirect('supplier')->with('success', 'Task Created Successfully!');
     }
 
@@ -92,8 +97,10 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Supplier $supplier)
     {
-        //
+        $supplier->delete();
+
+        return back()->with('success', 'produk deleted successfully');
     }
 }

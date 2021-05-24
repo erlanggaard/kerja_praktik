@@ -4,7 +4,7 @@
     <div class="main-section">
             <div class="section">
                 <div class="section-header">
-                    <h3>Edit Supplier</h3>
+                    <h3>Edit Pelanggan</h3>
                 </div>
                 <div class="card">
                     <div class="card-header">
@@ -14,7 +14,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-12">
-                                    <form action="{{ url('update-supplier/{id}') }}" method="POST">
+                                    <form action="{{ url('update-pelanggan/{id}') }}" method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
@@ -41,7 +41,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <button href="{{ url('supplier.simpan-supplier/{id}') }}" type="submit" class="btn btn-primary mb-4">Ubah Data</button>
+                                            <button href="{{ url('pelanggan.simpan-pelanggan') }}" type="submit" class="btn btn-primary mb-4">Submit</button>
                                         </div>
                                     </form>                                   
                                 </div>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pelanggan;
-use App\Models\Supplier;
 
 class PelangganController extends Controller
 {
@@ -15,8 +14,7 @@ class PelangganController extends Controller
      */
     public function index()
     {
-        $dataPelanggan = Supplier::where('status', '!=', 'suplier')->paginate(25);
-
+        $dataPelanggan = Pelanggan::where('status', '!=', 'suplier')->paginate(25);
         return view('pelanggan.pelanggan', compact('dataPelanggan'));
     }
 
@@ -55,9 +53,9 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pelanggan $pelanggan)
     {
-        //
+        return view('pelanggan.pelanggan', compact('dataPelanggan'));
     }
 
     /**
@@ -68,7 +66,8 @@ class PelangganController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pel = Pelanggan::where($id);
+        return view('pelanggan.edit-pelanggan', compact('pel'));
     }
 
     /**
@@ -78,9 +77,17 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pelanggan $pelanggan)
     {
-        //
+        $pelanggan->update([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'status' => $request->status,
+        ]);
+
+        return redirect('pelanggan')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -89,8 +96,9 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pelanggan $pelanggan)
     {
-        //
+        $pelanggan->delete();
+        return redirect('pelanggan')->with('success', 'produk deleted successfully');
     }
 }

@@ -32,7 +32,9 @@
                                 <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->status }}</td>
                                 <td>
-                                    <a href="{{ route('supplier.edit-supplier',$item->id) }}"> Edit </a> | <a href="" style="color: red"> Delete </a>
+                                    <a href="{{ url("edit-supplier",$item->id) }}"> Edit </a> 
+                                    |
+                                    <a href="{{ url("delete-supplier",$item->id) }}" style="color: red"> Delete </a>
                                 </td>
                             </tr>
                             @endforeach
