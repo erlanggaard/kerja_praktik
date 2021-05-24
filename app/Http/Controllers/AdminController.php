@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Supplier;
 use App\Models\ProdukTerjual;
+use App\Models\produkTidakterjualModel;
 
 class AdminController extends Controller
 {
@@ -28,11 +29,14 @@ class AdminController extends Controller
             ->groupBy('barang.nama_barang')
             ->orderBy('total_penjualan', 'desc')
             ->paginate(15);
+
+        $tidakTerjualCount = produkTidakterjualModel::get()->count();
         $data = [
             'kontakAll' => $kontak,
             'produkCount' => $produkCount,
             'best_seller' => $best_seller,
             'terjualCount' => $terjualCount,
+            'tidakTerjualCount' => $tidakTerjualCount,
         ];
         return view('halaman_admin.index', $data);
     }

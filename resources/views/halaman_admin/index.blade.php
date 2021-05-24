@@ -59,7 +59,7 @@
                         <h4>TIDAK TERJUAL</h4>
                     </div>
                     <div class="card-body">
-                        4,732
+                        {{$tidakTerjualCount}}
                         <a href="produk-tidakterjual" class="btn btn-primary" style="float:right;">
                             View All
                         </a>
