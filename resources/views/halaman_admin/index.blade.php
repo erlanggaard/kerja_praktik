@@ -72,7 +72,7 @@
 
 
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
                     <a href="best_seller">
@@ -81,18 +81,29 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table id="tabel_produk_terjual" class="table table-striped table-md">
-                            <tr>
-                                <th>No</th>
-                                <th>Kode Produk</th>
-                                <th>Nama Produk</th>
-                                <th>Total Penjualan</th>
-                            </tr>
-
+                        <table class="table table-striped table-md">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode Produk</th>
+                                    <th>Nama Produk</th>
+                                    <th>Total Penjualan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1 ?>
+                                @foreach ($best_seller as $best)
+                                <tr>
+                                    <td>{{ $no++ }}</td>
+                                    <td>{{ $best->kode_barang }}</td>
+                                    <td>{{ $best->nama_barang }}</td>
+                                    <td>{{ $best->total_penjualan }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
                         </table>
-
+                        {{ $best_seller->links() }}
                     </div>
-
                     <canvas id="myChart" height="158"></canvas>
                 </div>
 

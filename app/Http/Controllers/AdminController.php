@@ -19,9 +19,17 @@ class AdminController extends Controller
         //$barang = DB::table('barang')->get();
         $kontak = Supplier::all();
         $produkCount = Produk::get()->count();
+        $best_seller = DB::table('detail_penjualan')
+            ->select(DB::raw('COUNT(detail_penjualan.qty) AS total_penjualan, detail_penjualan.kode_barang'), 'nama_barang')
+            ->join('barang', 'barang.kode_barang', '=', 'detail_penjualan.kode_barang')
+            ->groupBy('detail_penjualan.kode_barang')
+            ->groupBy('barang.nama_barang')
+            ->orderBy('total_penjualan', 'desc')
+            ->paginate(15);
         $data = [
             'kontakAll' => $kontak,
             'produkCount' => $produkCount,
+            'best_seller' => $best_seller,
         ];
         return view('halaman_admin.index', $data);
     }
