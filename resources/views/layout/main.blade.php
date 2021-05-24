@@ -121,9 +121,7 @@
                     Copyright &copy; 2021 <div class="bullet"></div> <a href=""></a>
                 </div>
                 <div class="footer-right">
-                    <a href="formchat" class="btn btn-primary" style="float:initial">
-                        Chat Pelanggan
-                    </a>
+                    
                 </div>
             </footer>
         </div>

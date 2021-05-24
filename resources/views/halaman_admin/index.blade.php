@@ -104,7 +104,10 @@
                         </table>
                         {{ $best_seller->links() }}
                     </div>
-                    <canvas id="myChart" height="158"></canvas>
+                    <!-- <canvas id="myChart" height="140"></canvas> -->
+                    <a href="formchat" class="btn btn-primary" style="float:right">
+                        Chat Pelanggan
+                    </a>
                 </div>
 
             </div>
