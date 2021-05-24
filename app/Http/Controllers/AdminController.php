@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Supplier;
@@ -17,8 +18,10 @@ class AdminController extends Controller
     {
         //$barang = DB::table('barang')->get();
         $kontak = Supplier::all();
+        $produkCount = Produk::get()->count();
         $data = [
             'kontakAll' => $kontak,
+            'produkCount' => $produkCount,
         ];
         return view('halaman_admin.index', $data);
     }

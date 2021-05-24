@@ -111,7 +111,7 @@
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
-                    @yield('container');
+                    @yield('container')
                 </section>
             </div>
 
@@ -121,7 +121,7 @@
                     Copyright &copy; 2021 <div class="bullet"></div> <a href=""></a>
                 </div>
                 <div class="footer-right">
-                    <a href="formchat" class="btn btn-primary" style="float:right;">
+                    <a href="formchat" class="btn btn-primary" style="float:initial">
                         Chat Pelanggan
                     </a>
                 </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DetailPenjualan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -14,9 +15,14 @@ class bestSellerController extends Controller
      */
     public function index()
     {
-
-
-        return view('halaman_admin.best_seller');
+        $best_seller = DB::table('detail_penjualan')
+            ->select(DB::raw('COUNT(detail_penjualan.qty) AS total_penjualan, detail_penjualan.kode_barang'), 'nama_barang')
+            ->join('barang', 'barang.kode_barang', '=', 'detail_penjualan.kode_barang')
+            ->groupBy('detail_penjualan.kode_barang')
+            ->groupBy('barang.nama_barang')
+            ->orderBy('total_penjualan', 'desc')
+            ->paginate(25);
+        return view('halaman_admin.best_seller', compact('best_seller'));
     }
 
     /**

@@ -16,7 +16,7 @@
                         <h4>PRODUK</h4>
                     </div>
                     <div class="card-body">
-                        2.181
+                        {{$produkCount}}
                         <a href="{{ route('produk.produk') }}" class="btn btn-primary" style="float:right;">
                             View All
                         </a>

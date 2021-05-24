@@ -19,15 +19,17 @@
                                         <th>Nama Produk</th>
                                         <th>Total Terjual</th>
                                     </tr>
-                                    <tr>
-                                        <td></td>
-                                    </tr>
                                 </thead>
                                 <tbody>
-
+                                    <?php $no = 1 ?>
+                                    @foreach ($best_seller as $best)
                                     <tr>
-
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $best->kode_barang }}</td>
+                                        <td>{{ $best->nama_barang }}</td>
+                                        <td>{{ $best->total_penjualan }}</td>
                                     </tr>
+                                    @endforeach
 
                                 </tbody>
                             </table>
