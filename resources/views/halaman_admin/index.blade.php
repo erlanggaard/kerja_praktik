@@ -38,7 +38,7 @@
                         <h4>TERJUAL</h4>
                     </div>
                     <div class="card-body">
-                        4,732
+                        {{$terjualCount}}
                         <a href="produk-terjual" class="btn btn-primary" style="float:right;">
                             View All
                         </a>

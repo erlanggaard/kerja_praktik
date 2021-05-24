@@ -6,6 +6,7 @@ use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Supplier;
+use App\Models\ProdukTerjual;
 
 class AdminController extends Controller
 {
@@ -19,6 +20,7 @@ class AdminController extends Controller
         //$barang = DB::table('barang')->get();
         $kontak = Supplier::all();
         $produkCount = Produk::get()->count();
+        $terjualCount = ProdukTerjual::get()->count();
         $best_seller = DB::table('detail_penjualan')
             ->select(DB::raw('COUNT(detail_penjualan.qty) AS total_penjualan, detail_penjualan.kode_barang'), 'nama_barang')
             ->join('barang', 'barang.kode_barang', '=', 'detail_penjualan.kode_barang')
@@ -30,6 +32,7 @@ class AdminController extends Controller
             'kontakAll' => $kontak,
             'produkCount' => $produkCount,
             'best_seller' => $best_seller,
+            'terjualCount' => $terjualCount,
         ];
         return view('halaman_admin.index', $data);
     }
