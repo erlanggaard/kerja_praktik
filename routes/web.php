@@ -55,8 +55,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('create-supplier', [SupplierController::class, 'create'])->name('supplier.create-supplier');
     Route::post('save-supplier', [SupplierController::class, 'store'])->name('supplier.simpan-supplier');
     Route::get('edit-supplier/{id}', [SupplierController::class, 'edit'])->name('supplier.edit-supplier');
-    Route::post('update-supplier/{id}', [SupplierController::class, 'update'])->name('supplier.update-supplier');
-    Route::get('delete-supplier/{id}', [SupplierController::class, 'destroy'])->name('supplier.delete-supplier');
+    Route::put('update-supplier/{id}', [SupplierController::class, 'update'])->name('supplier.update-supplier');
+    Route::delete('delete-supplier/{id}', [SupplierController::class, 'destroy'])->name('supplier.delete-supplier');
     //end Route Supplier
 
     //Route Pelanggan
@@ -64,7 +64,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('create-pelanggan', [PelangganController::class, 'create'])->name('pelanggan.create-pelanggan');
     Route::post('save-pelanggan', [PelangganController::class, 'store'])->name('pelanggan.simpan-pelanggan');
     Route::get('edit-pelanggan/{id}', [PelangganController::class, 'edit'])->name('pelanggan.edit-pelanggan');
-    Route::post('update-pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update-pelanggan');
-    Route::get('delete-pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.delete-pelanggan');
+    Route::put('update-pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update-pelanggan');
+    Route::delete('delete-pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.delete-pelanggan');
     //end Route Pelanggan
 });

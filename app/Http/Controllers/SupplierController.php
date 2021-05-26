@@ -67,7 +67,7 @@ class SupplierController extends Controller
      */
     public function edit($id)
     {
-        $sup = Supplier::where($id);
+        $sup = Supplier::findOrFail($id);
         return view('supplier.edit-supplier', compact('sup'));
     }
 
@@ -78,9 +78,9 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Supplier $supplier)
+    public function update(Request $request, $id)
     {
-        $supplier->update([
+        Supplier::find($id)->update([
             'nama' => $request -> nama,
             'alamat' => $request -> alamat,
             'email' => $request -> email,
@@ -97,9 +97,9 @@ class SupplierController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Supplier $supplier)
+    public function destroy($id)
     {
-        $supplier->delete();
+        Supplier::find($id)->delete();
 
         return back()->with('success', 'produk deleted successfully');
     }

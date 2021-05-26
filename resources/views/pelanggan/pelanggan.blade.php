@@ -15,6 +15,7 @@
             <div class="table-responsive">
                 <table id="tabel_produk_terjual" class="table table-striped table-md">
                     <tr>
+                        <th>id</th>
                         <th>Nama</th>
                         <th>Alamat</th>
                         <th>Email</th>
@@ -31,9 +32,14 @@
                         <td>{{ $item->telepon }}</td>
                         <td>{{ $item->status }}</td>
                         <td>
-                            <a href="{{ url("edit-pelanggan",$item->id) }}"> Edit </a> 
+                            <a href="{{ url("edit-pelanggan",$item->id) }}"  class="btn btn-sm btn-info"> Edit </a> 
                             |
-                            <a href="{{ url("delete-pelanggan",$item->id) }}" style="color: red"> Delete </a>
+                            <form action="{{ route('pelanggan.delete-pelanggan', $item->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger text-light"> Delete </button>
+                                
+                            </form>
                         </td>
                     </tr>
                     @endforeach

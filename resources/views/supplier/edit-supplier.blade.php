@@ -14,7 +14,8 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="col-12">
-                                    <form action="{{ url('update-supplier/{id}') }}" method="POST">
+                                    <form action="{{ route('supplier.update-supplier', $sup->id) }}" method="POST">
+                                        @method('PUT')
                                         @csrf
                                         <div class="form-group">
                                             <label for="nama">Nama</label>
@@ -41,7 +42,7 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <button href="{{ url('supplier.simpan-supplier/{id}') }}" type="submit" class="btn btn-primary mb-4">Ubah Data</button>
+                                            <button type="submit" class="btn btn-primary mb-4">Ubah Data</button>
                                         </div>
                                     </form>                                   
                                 </div>

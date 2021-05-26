@@ -77,9 +77,9 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pelanggan $pelanggan)
+    public function update(Request $request, $id)
     {
-        $pelanggan->update([
+        Pelanggan::find($id)->update([
             'nama' => $request->nama,
             'alamat' => $request->alamat,
             'email' => $request->email,
@@ -96,9 +96,9 @@ class PelangganController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pelanggan $pelanggan)
+    public function destroy($id)
     {
-        $pelanggan->delete();
-        return redirect('pelanggan')->with('success', 'produk deleted successfully');
+        Pelanggan::find($id)->delete();
+        return back()->with('success', 'produk deleted successfully');
     }
 }

@@ -32,9 +32,14 @@
                                 <td>{{ $item->telepon }}</td>
                                 <td>{{ $item->status }}</td>
                                 <td>
-                                    <a href="{{ url("edit-supplier",$item->id) }}"> Edit </a> 
+                                    <a href="{{ url("edit-supplier",$item->id) }}"  class="btn btn-sm btn-info"> Edit </a> 
                                     |
-                                    <a href="{{ url("delete-supplier",$item->id) }}" style="color: red"> Delete </a>
+                                    <form action="{{ route('supplier.delete-supplier', $item->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-sm btn-danger text-light"> Delete </button>
+                                        
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach
