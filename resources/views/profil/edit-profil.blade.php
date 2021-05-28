@@ -3,7 +3,7 @@
 @section('container')
 
 <section class="section">
-    <div class="card mt-2">
+    <div class="card">
         <div class="card-header">
             <form method="post" class="needs-validation" novalidate="">
                 <div class="card-header">
