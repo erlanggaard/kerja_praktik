@@ -6,6 +6,7 @@ use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\produkController;
 use App\Http\Controllers\stokprodukController;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Auth;
 
 // Route Login
@@ -67,4 +68,12 @@ Route::middleware(['auth'])->group(function () {
     Route::put('update-pelanggan/{id}', [PelangganController::class, 'update'])->name('pelanggan.update-pelanggan');
     Route::delete('delete-pelanggan/{id}', [PelangganController::class, 'destroy'])->name('pelanggan.delete-pelanggan');
     //end Route Pelanggan
+
+    // Route Profil
+    Route::get('profil', [ProfilController::class, 'index'])->name('profil.view');
+    Route::get('edit', [ProfilController::class, 'edit'])->name('profil.edit-profil');
+
+
+
+    //end Route Profil
 });
