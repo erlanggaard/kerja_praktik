@@ -9,9 +9,6 @@
             <h4>Profile</h4>
         </div>
         <h2 class="section-title">Hi, Ujang!</h2>
-        <p class="section-lead">
-            Change information about yourself on this page.
-        </p>
         <div class="card-body">
             <div class="row">
                 <div class="card profile-widget">
