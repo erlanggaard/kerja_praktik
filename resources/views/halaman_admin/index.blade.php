@@ -69,7 +69,7 @@
         </div>
 
     </div>
-
+    {{-- <div class="container"> --}}
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
@@ -82,7 +82,7 @@
             </div>
         </div>
     </div>
-
+    {{-- </div> --}}
 
     <div class="row">
         <div class="col-lg-12">
@@ -147,7 +147,7 @@
       legend: { display: false },
       title: {
         display: true,
-        text: 'Predicted world population (millions) in 2050'
+        text: '5 Barang Dengan Stok Terbanyak'
       }
     }
         
