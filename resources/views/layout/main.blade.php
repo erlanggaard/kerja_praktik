@@ -59,7 +59,7 @@
                     <li class="dropdown"><a href="#" data-toggle="dropdown"
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, Ade</div>
+                            <div class="d-sm-none d-lg-inline-block">Hi,{{Auth::user()->nama}}</div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <a href="{{route('profil.view')}}" class="dropdown-item has-icon">
@@ -80,7 +80,7 @@
             <div class="main-sidebar">
                 <aside id="sidebar-wrapper">
                     <div class="sidebar-brand">
-                        <a href="home">Ahlibisnis.id</a>
+                        <a href="{{route('home')}}">Ahlibisnis.id</a>
                     </div>
                     <div class="sidebar-brand sidebar-brand-sm">
                         <a href="index.html"></a>
@@ -204,6 +204,7 @@
     <script src="{{asset('assets/modules/jquery-selectric/jquery.selectric.min.js')}}"></script>
 
     @yield('specificJS')
+    @stack('scripts')
 </body>
 
 </html>

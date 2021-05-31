@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfilController extends Controller
 {
@@ -13,7 +15,7 @@ class ProfilController extends Controller
      */
     public function index()
     {
-        return view('profil.view');
+        //
     }
 
     /**
@@ -43,9 +45,10 @@ class ProfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $user = Auth::user();
+        return view('profil.view', compact('user'));
     }
 
     /**
@@ -56,7 +59,8 @@ class ProfilController extends Controller
      */
     public function edit()
     {
-        return view('profil.edit-profil');
+        $user = Auth::user();
+        return view('profil.edit-profil', compact('user'));
     }
 
     /**
@@ -66,9 +70,15 @@ class ProfilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        dd($request->all());
+        $user =  User::find(Auth::Id());
+        $user->nama = $request->nama;
+        // $user->nama = $request->nama;
+        // $user->nama = $request->nama;
+        // $user->nama = $request->nama;
+        $user->save();
     }
 
     /**

@@ -70,6 +70,19 @@
 
     </div>
 
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Grafik Stok Produk</h4>
+                </div>
+                <div class="card-body">
+                    <canvas id="grafikstokproduk" height="158"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="col-lg-12">
@@ -113,6 +126,32 @@
         </div>
 
     </div>
-    </div>
 </section>
+
+@push('scripts')
+<script>
+    console.log('test');
+    var grafikstok = new Chart(document.getElementById('grafikstokproduk'), {
+        type: 'bar',
+    data: {
+      labels: @json($label),
+      datasets: [
+        {
+          label: "Jumlah Stok",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: @json($jumlah)
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+        
+      });
+</script>
+@endpush
 @endsection

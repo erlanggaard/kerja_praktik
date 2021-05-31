@@ -9,6 +9,7 @@ use App\Models\Supplier;
 use App\Models\ProdukTerjual;
 use App\Models\produkTidakterjualModel;
 
+
 class AdminController extends Controller
 {
     /**
@@ -29,7 +30,13 @@ class AdminController extends Controller
             ->groupBy('barang.nama_barang')
             ->orderBy('total_penjualan', 'desc')
             ->paginate(15);
-
+        $grafikstok = DB::select('SELECT nama_barang,stok FROM barang ORDER by stok DESC LIMIT 5');
+        $label = [];
+        $jumlah = [];
+        foreach ($grafikstok as $item) {
+            $label[] = $item->nama_barang;
+            $jumlah[] = $item->stok;
+        }
         $tidakTerjualCount = produkTidakterjualModel::get()->count();
         $data = [
             'kontakAll' => $kontak,
@@ -37,6 +44,8 @@ class AdminController extends Controller
             'best_seller' => $best_seller,
             'terjualCount' => $terjualCount,
             'tidakTerjualCount' => $tidakTerjualCount,
+            'label' => $label,
+            'jumlah' => $jumlah
         ];
         return view('halaman_admin.index', $data);
     }

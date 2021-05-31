@@ -5,7 +5,9 @@
 <section class="section">
     <div class="card">
         <div class="card-header">
-            <form method="post" class="needs-validation" novalidate="">
+            <form action="{{ route('profil.submit') }}" method="POST">
+                @method('PUT')
+                @csrf
                 <div class="card-header">
                     <h4>Edit Profile</h4>
                 </div>
@@ -13,16 +15,9 @@
                     <div class="row">
                         <div class="form-group col-md-6 col-12">
                             <label>First Name</label>
-                            <input type="text" class="form-control" value="Ujang" required="">
+                            <input type="text" class="form-control" value="{{$user->nama}}" name="nama" required="">
                             <div class="invalid-feedback">
-                                Please fill in the first name
-                            </div>
-                        </div>
-                        <div class="form-group col-md-6 col-12">
-                            <label>Last Name</label>
-                            <input type="text" class="form-control" value="Maman" required="">
-                            <div class="invalid-feedback">
-                                Please fill in the last name
+                                Please fill in the Name
                             </div>
                         </div>
                     </div>

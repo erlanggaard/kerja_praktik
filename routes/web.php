@@ -70,10 +70,8 @@ Route::middleware(['auth'])->group(function () {
     //end Route Pelanggan
 
     // Route Profil
-    Route::get('profil', [ProfilController::class, 'index'])->name('profil.view');
+    Route::get('profil', [ProfilController::class, 'show'])->name('profil.view');
     Route::get('edit', [ProfilController::class, 'edit'])->name('profil.edit-profil');
-
-
-
+    Route::put('update-profil', [ProfilController::class, 'update'])->name('profil.submit');
     //end Route Profil
 });

@@ -8,7 +8,7 @@
         <div class="card-header">
             <h4>Profile</h4>
         </div>
-        <h2 class="section-title">Hi, Ujang!</h2>
+        <h2 class="section-title">Hi, {{$user->nama}}</h2>
         <div class="card-body">
             <div class="row">
                 <div class="card profile-widget">

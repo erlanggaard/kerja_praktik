@@ -11,7 +11,7 @@
                 <div class="col-md-6">
                     <div class="article-header">
                         <div class="article-image">
-                            <img src="assets/img/{{$dataProduk->foto}}" alt="{{$dataProduk->foto}}">
+                            <img src="assets/img/{{$dataProduk->foto ?? 'Sample.JPG'}}" alt="{{$dataProduk->foto}}">
                         </div>
                     </div>
                 </div>
