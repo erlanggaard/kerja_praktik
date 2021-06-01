@@ -44,8 +44,8 @@
                     </div>
                     <div class="card-footer text-right">
                         <button type="submit" class="btn btn-primary">Save Changes</button>
-                        <a href="{{route('profil.view')}}" class="btn btn-primary"> Back
-                        </a>
+                        {{-- <a href="{{route('profil.view')}}" class="btn btn-primary"> Back
+                        </a> --}}
                     </div>
                 </form>
             </div>
@@ -53,5 +53,4 @@
     </div>
 </div>
 </section>
-
 @endsection

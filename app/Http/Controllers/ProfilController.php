@@ -79,7 +79,7 @@ class ProfilController extends Controller
         $user->telepon = $request->telepon;
         $user->alamat = $request->alamat;
         $user->save();
-        return redirect('edit');
+        return redirect('profil')->with('success', 'Task Update Successfully!');
     }
 
     /**
