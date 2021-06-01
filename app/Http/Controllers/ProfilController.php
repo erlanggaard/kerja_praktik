@@ -72,13 +72,14 @@ class ProfilController extends Controller
      */
     public function update(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $user =  User::find(Auth::Id());
         $user->nama = $request->nama;
         $user->email = $request->email;
         $user->telepon = $request->telepon;
         $user->alamat = $request->alamat;
         $user->save();
+        return redirect('edit');
     }
 
     /**

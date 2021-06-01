@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button class="btn btn-primary">Save Changes</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
                         <a href="{{route('profil.view')}}" class="btn btn-primary"> Back
                         </a>
                     </div>

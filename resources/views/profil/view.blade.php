@@ -38,6 +38,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="profile-widget-description">
+                        <p>Address</p>
+                        <div class="profile-widget-name" style="font-size: 20px"> {{$user->alamat}} <div
+                                class="text-muted d-inline font-weight-normal">
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-footer text-center">
                         <div class="card-footer text-right">
                             <a href="{{route('profil.edit-profil')}}" class="btn btn-icon icon-left btn-primary"><i

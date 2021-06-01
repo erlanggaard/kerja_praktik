@@ -73,5 +73,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('profil', [ProfilController::class, 'show'])->name('profil.view');
     Route::get('edit', [ProfilController::class, 'edit'])->name('profil.edit-profil');
     Route::put('update-profil', [ProfilController::class, 'update'])->name('profil.submit');
+    Route::post('update-profil', [ProfilController::class, 'update'])->name('profil.submit');
     //end Route Profil
 });
