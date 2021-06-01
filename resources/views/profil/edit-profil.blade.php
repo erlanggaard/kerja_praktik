@@ -1,67 +1,45 @@
 @extends('layout.main');
 
 @section('container')
-
-<section class="section">
-    <div class="card">
-        <div class="card-header">
-            <form action="{{ route('profil.submit') }}" method="POST">
-                @method('PUT')
-                @csrf
-                <div class="card-header">
-                    <h4>Edit Profile</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="form-group col-md-6 col-12">
-                            <label>First Name</label>
+<div class="section-body">
+    <div class="row">
+        <div class="col-12 col-lg-12">
+            <div class="card">
+                <form action="{{ route('profil.submit') }}" method="POST">
+                    @method('PUT')
+                    @csrf
+                    <div class="card-header">
+                        <h3>Edit Profil</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Your Name</label>
                             <input type="text" class="form-control" value="{{$user->nama}}" name="nama" required="">
-                            <div class="invalid-feedback">
-                                Please fill in the Name
-                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-md-7 col-12">
+                        <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control" value="ujang@maman.com" required="">
-                            <div class="invalid-feedback">
-                                Please fill in the email
-                            </div>
+                            <input type="email" class="form-control" value="{{$user->email}}" name="email" required="">
                         </div>
-                        <div class="form-group col-md-5 col-12">
+                        <div class="form-group">
                             <label>Phone</label>
-                            <input type="tel" class="form-control" value="">
+                            <input type="number" class="form-control" value="{{$user->telepon}}" name="telepon"
+                                required="">
+                        </div>
+                        <div class="form-group mb-0">
+                            <label>Alamat</label>
+                            <input class="form-control" value="{{$user->alamat}}" name="alamat" required=""></input>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="form-group col-12">
-                            <label>Bio</label>
-                            <textarea
-                                class="form-control summernote-simple">Ujang maman is a superhero name in <b>Indonesia</b>, especially in my family. He is not a fictional character but an original hero in my family, a hero for his children and for his wife. So, I use the name as a user in this template. Not a tribute, I'm just bored with <b>'John Doe'</b>.</textarea>
-                        </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Save Changes</button>
+                        <a href="{{route('profil.view')}}" class="btn btn-primary"> Back
+                        </a>
                     </div>
-                    <div class="row">
-                        <div class="form-group mb-0 col-12">
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" name="remember" class="custom-control-input" id="newsletter">
-                                <label class="custom-control-label" for="newsletter">Subscribe to
-                                    newsletter</label>
-                                <div class="text-muted form-text">
-                                    You will get new information about products, offers and promotions
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer text-right">
-                    <button class="btn btn-primary">Save Changes</button>
-                    <a href="{{route('profil.view')}}" class="btn btn-primary"> Back
-                    </a>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
+</div>
 </section>
 
 @endsection

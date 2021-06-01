@@ -75,9 +75,9 @@ class ProfilController extends Controller
         dd($request->all());
         $user =  User::find(Auth::Id());
         $user->nama = $request->nama;
-        // $user->nama = $request->nama;
-        // $user->nama = $request->nama;
-        // $user->nama = $request->nama;
+        $user->email = $request->email;
+        $user->telepon = $request->telepon;
+        $user->alamat = $request->alamat;
         $user->save();
     }
 
