@@ -15,19 +15,31 @@
                         <div class="form-group">
                             <label>Your Name</label>
                             <input type="text" class="form-control" value="{{$user->nama}}" name="nama" required="">
+                            <div class="invalid-feedback">
+                                Please fill in the Name
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Email</label>
                             <input type="email" class="form-control" value="{{$user->email}}" name="email" required="">
+                            <div class="invalid-feedback">
+                                Please fill in the Email
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
                             <input type="number" class="form-control" value="{{$user->telepon}}" name="telepon"
                                 required="">
+                            <div class="invalid-feedback">
+                                Please fill in the Phone
+                            </div>
                         </div>
                         <div class="form-group mb-0">
-                            <label>Alamat</label>
+                            <label>Address</label>
                             <input class="form-control" value="{{$user->alamat}}" name="alamat" required=""></input>
+                            <div class="invalid-feedback">
+                                Please fill in the Address
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer text-right">
