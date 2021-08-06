@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Supplier;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class SupplierController extends Controller
 {
@@ -38,11 +39,11 @@ class SupplierController extends Controller
     {
         // dd($request->all());
         Supplier::create([
-            'nama' => $request -> nama,
-            'alamat' => $request -> alamat,
-            'email' => $request -> email,
-            'telepon' => $request -> telepon,
-            'status' => $request -> status,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'status' => $request->status,
         ]);
 
         return redirect('supplier')->with('success', 'Task Created Successfully!');
@@ -81,11 +82,11 @@ class SupplierController extends Controller
     public function update(Request $request, $id)
     {
         Supplier::find($id)->update([
-            'nama' => $request -> nama,
-            'alamat' => $request -> alamat,
-            'email' => $request -> email,
-            'telepon' => $request -> telepon,
-            'status' => $request -> status,
+            'nama' => $request->nama,
+            'alamat' => $request->alamat,
+            'email' => $request->email,
+            'telepon' => $request->telepon,
+            'status' => $request->status,
         ]);
 
         return redirect('supplier')->with('success', 'Task Created Successfully!');

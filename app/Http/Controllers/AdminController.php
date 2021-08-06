@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produk;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\Supplier;
+use Illuminate\Http\Request;
 use App\Models\ProdukTerjual;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use App\Models\produkTidakterjualModel;
 
 
