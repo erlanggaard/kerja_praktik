@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produk;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class produkController extends Controller
 {
