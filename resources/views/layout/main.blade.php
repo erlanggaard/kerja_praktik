@@ -91,7 +91,7 @@
                             <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Produk</span></a>
                             <ul class="dropdown-menu">
                                 <li><a class="nav-link" href="{{ route('produk.produk') }}">Lihat Produk</a></li>
-                                <li><a class="nav-link" href="index-0.html">Tambah Produk</a></li>
+                                <li><a class="nav-link" href="{{ route('produk.create') }}">Tambah Produk</a></li>
                                 <li><a class="nav-link" href="{{ route('produk.stock-produk') }}">Stok Produk</a></li>
                             </ul>
                         </li>

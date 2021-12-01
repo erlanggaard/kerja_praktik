@@ -28,7 +28,17 @@
                         <td>{{ $item->stok }}</td>
                         <td>{{ $item->merk }}</td>
                         <td>{{ $item->jenis_barang }}</td>
+                        <td><a href="{{ url("edit",$item->id) }}" class="btn btn-sm btn-info"> Edit </a>
+                            |
+                            <form action="{{ route('produk.delete-produk', $item->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger text-light"> Delete </button>
+
+                            </form>
+                        </td>
                     </tr>
+
                     @endforeach
 
                 </table>

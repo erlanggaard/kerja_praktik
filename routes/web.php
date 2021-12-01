@@ -45,6 +45,11 @@ Route::middleware(['auth'])->group(function () {
     //Route Produk
     Route::get('produk', [produkController::class, 'index'])->name('produk.produk');
     Route::get('produk/{id}', [produkController::class, 'show'])->name('produk.produkdetail');
+    Route::get('create', [produkController::class, 'create'])->name('produk.create');
+    Route::post('save-produk', [produkController::class, 'store'])->name('produk.simpan-produk');
+    Route::get('edit/{id}', [produkController::class, 'edit'])->name('supplier.edit');
+    Route::put('update-produk/{id}', [produkController::class, 'update'])->name('produk.update-produk');
+    Route::delete('delete-produk/{id}', [produkController::class, 'destroy'])->name('produk.delete-produk');
     // end Route Produk
 
     // Route Stock Produk

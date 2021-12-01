@@ -102,6 +102,6 @@ class SupplierController extends Controller
     {
         Supplier::find($id)->delete();
 
-        return back()->with('success', 'produk deleted successfully');
+        return back()->with('success', 'supplier deleted successfully');
     }
 }

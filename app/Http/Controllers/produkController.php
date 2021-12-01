@@ -27,7 +27,7 @@ class produkController extends Controller
      */
     public function create()
     {
-        //
+        return view('produk.create');
     }
 
     /**
@@ -38,7 +38,22 @@ class produkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Produk::create([
+            'nama' => $request->nama_barang,
+            'stok' => $request->stok,
+            'tanpa stok' => $request->tanpastok,
+            'jenis barang' => $request->jenis_barang,
+            'foto' => $request->foto,
+            'status' => $request->status,
+            'letak rak' => $request->letak_rak,
+            'merk' => $request->merk,
+            'jenis barang' => $request->jenis_barang,
+            'keterangan' => $request->keterangan,
+            'harga beli' => $request->harga_beli,
+            'harga jual' => $request->harga_jual,
+        ]);
+
+        return redirect('produk')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -61,7 +76,8 @@ class produkController extends Controller
      */
     public function edit($id)
     {
-        //
+        $prod = Produk::findOrFail($id);
+        return view('produk.edit', compact('prod'));
     }
 
     /**
@@ -73,7 +89,23 @@ class produkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Produk::find($id)->update([
+            'nama' => $request->nama_barang,
+            'stok' => $request->stok,
+            'tanpa stok' => $request->tanpastok,
+            'jenis barang' => $request->jenis_barang,
+            'foto' => $request->foto,
+            'status' => $request->status,
+            'letak rak' => $request->letak_rak,
+            'merk' => $request->merk,
+            'jenis barang' => $request->jenis_barang,
+            'keterangan' => $request->keterangan,
+            'stok menipis' => $request->stokmenipis,
+            'harga beli' => $request->harga_beli,
+            'harga jual' => $request->harga_jual,
+        ]);
+
+        return redirect('produk')->with('success', 'Task Created Successfully!');
     }
 
     /**
@@ -84,6 +116,7 @@ class produkController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Produk::find($id)->delete();
+        return back()->with('success', 'produk deleted successfully');
     }
 }
