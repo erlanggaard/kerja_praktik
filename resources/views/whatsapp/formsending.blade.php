@@ -23,7 +23,7 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label">No telp</label>
-                    <input type="text" name="telepon" id="telepon" class="form-control" placeholder="Isi email disini">
+                    <input type="text" name="telepon" id="telepon" class="form-control" placeholder="Isi no disini">
                 </div>
                 <div class="mb-3">
                     <label for="message">Pesan</label>
