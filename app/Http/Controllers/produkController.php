@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Crypt;
 
 class produkController extends Controller
 {
@@ -38,22 +39,38 @@ class produkController extends Controller
      */
     public function store(Request $request)
     {
-        Produk::create([
-            'nama' => $request->nama_barang,
+        $post = Produk::create([
+            'nama_barang' => $request->nama_barang,
             'stok' => $request->stok,
-            'tanpa stok' => $request->tanpastok,
-            'jenis barang' => $request->jenis_barang,
+            'tanpastok' => $request->tanpastok,
+            'jenis_barang' => $request->jenis_barang,
             'foto' => $request->foto,
             'status' => $request->status,
-            'letak rak' => $request->letak_rak,
+            'letak_rak' => $request->letak_rak,
             'merk' => $request->merk,
-            'jenis barang' => $request->jenis_barang,
+            'jenis_barang' => $request->jenis_barang,
             'keterangan' => $request->keterangan,
-            'harga beli' => $request->harga_beli,
-            'harga jual' => $request->harga_jual,
+            'harga_beli' => $request->harga_beli,
+            'harga_jual' => $request->harga_jual,
+            'kode_user' => Crypt::encryptString($request->user()->id)
         ]);
-
-        return redirect('produk')->with('success', 'Task Created Successfully!');
+        $post->update([
+            'kode_barang' => Crypt::encryptString($post->id)
+        ]);
+        if ($post) {
+            return redirect()
+                ->route('produk.stock-produk')
+                ->with([
+                    'success' => 'New post has been created successfully'
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    'error' => 'Some problem occurred, please try again'
+                ]);
+        }
     }
 
     /**
@@ -89,23 +106,38 @@ class produkController extends Controller
      */
     public function update(Request $request, $id)
     {
-        Produk::find($id)->update([
-            'nama' => $request->nama_barang,
+        $post = Produk::find($id)->update([
+            'nama_barang' => $request->nama_barang,
             'stok' => $request->stok,
-            'tanpa stok' => $request->tanpastok,
-            'jenis barang' => $request->jenis_barang,
+            'tanpastok' => $request->tanpastok,
+            'jenis_barang' => $request->jenis_barang,
             'foto' => $request->foto,
             'status' => $request->status,
-            'letak rak' => $request->letak_rak,
+            'letak_rak' => $request->letak_rak,
             'merk' => $request->merk,
-            'jenis barang' => $request->jenis_barang,
+            'jenis_barang' => $request->jenis_barang,
             'keterangan' => $request->keterangan,
-            'stok menipis' => $request->stokmenipis,
-            'harga beli' => $request->harga_beli,
-            'harga jual' => $request->harga_jual,
+            'harga_beli' => $request->harga_beli,
+            'harga_jual' => $request->harga_jual,
+            'kode_user' => Crypt::encryptString($request->user()->id),
+            'kode_barang' => Crypt::encryptString($id),
+            'stokmenipis' => $request->stokmenipis
         ]);
 
-        return redirect('produk')->with('success', 'Task Created Successfully!');
+        if ($post) {
+            return redirect()
+                ->route('produk.stock-produk')
+                ->with([
+                    'success' => 'New post has been created successfully'
+                ]);
+        } else {
+            return redirect()
+                ->back()
+                ->withInput()
+                ->with([
+                    'error' => 'Some problem occurred, please try again'
+                ]);
+        }
     }
 
     /**
