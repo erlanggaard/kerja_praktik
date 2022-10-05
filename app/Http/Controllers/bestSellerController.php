@@ -21,6 +21,7 @@ class bestSellerController extends Controller
             ->groupBy('detail_penjualan.kode_barang')
             ->groupBy('barang.nama_barang')
             ->orderBy('total_penjualan', 'desc')
+            // ->limit(10)
             ->paginate(25);
         return view('halaman_admin.best_seller', compact('best_seller'));
     }
